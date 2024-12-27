@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1011.0" prefWidth="1919.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.dashboardViewController">
+   <children>
+      <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1011.0" prefWidth="1919.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="1011.0" fitWidth="1872.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="TOP_LEFT">
+               <image>
+                  <Image url="views/images/dashboardManager.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="filemanagerButton" mnemonicParsing="false" onAction="#openFileManager" prefHeight="26.0" prefWidth="193.0" style="-fx-background-color: transparent;" translateX="-850.0" translateY="-230.0" />
+            <Button fx:id="yourProfileButton" mnemonicParsing="false" onAction="#openYourProfile" prefHeight="26.0" prefWidth="193.0" style="-fx-background-color: transparent;" translateX="-850.0" translateY="-280.0" />
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

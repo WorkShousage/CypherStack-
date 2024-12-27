@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #121212;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.fileMenuController" >
+   <children>
+      <VBox layoutX="-1.0" layoutY="-2.0" prefHeight="409.0" prefWidth="600.0">
+         <children>
+            <Label prefHeight="32.0" prefWidth="92.0" text="Upload Files" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="30.0" right="20.0" top="30.0" />
+               </VBox.margin>
+            </Label>
+            <GridPane prefHeight="357.0" prefWidth="600.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="300.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label prefHeight="22.0" prefWidth="166.0" text="Select File Permissions" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="30.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <RadioButton fx:id="localStorageRadio" 
+             onAction="#handleLocalStorageRadio"
+             mnemonicParsing="false" 
+             prefHeight="40.0" 
+             prefWidth="258.0" 
+             style="-fx-border-color: #0078D7; -fx-border-radius: 5; -fx-border-width: 2;" 
+             text="Local Storage" 
+             textFill="WHITE" 
+             GridPane.rowIndex="1">
+    <GridPane.margin>
+        <Insets left="30.0" />
+    </GridPane.margin>
+    <padding>
+        <Insets left="10.0" />
+    </padding>
+</RadioButton>
+
+<RadioButton fx:id="cloudStorageRadio" 
+             onAction="#handleCloudStorageRadio"
+             layoutX="40.0" 
+             layoutY="40.0" 
+             mnemonicParsing="false" 
+             prefHeight="40.0" 
+             prefWidth="258.0" 
+             style="-fx-border-color: #0078D7; -fx-border-radius: 5; -fx-border-width: 2;" 
+             text="Cloud Storage" 
+             textFill="WHITE" 
+             GridPane.columnIndex="1" 
+             GridPane.rowIndex="1">
+    <padding>
+        <Insets left="10.0" />
+    </padding>
+</RadioButton>
+                  <GridPane minWidth="-Infinity" prefHeight="58.0" prefWidth="539.0" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints prefHeight="40.0" vgrow="SOMETIMES" />
+                      <RowConstraints prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <HBox alignment="CENTER_LEFT" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="530.0" style="-fx-background-color: #2e2e2e; -fx-background-radius: 5;" GridPane.columnSpan="3">
+                           <children>
+                              <Label contentDisplay="CENTER" text="Name" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="100.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label text="Size" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="100.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label text="Type" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="100.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="1">
+                           <children>
+                              <Label fx:id="name" prefHeight="38.0" prefWidth="134.0" textFill="WHITE">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="size" prefHeight="38.0" prefWidth="134.0" textFill="WHITE">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="type" prefHeight="38.0" prefWidth="134.0" textFill="WHITE">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                     <GridPane.margin>
+                        <Insets bottom="30.0" left="30.0" right="30.0" top="10.0" />
+                     </GridPane.margin>
+             
+                  </GridPane>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
+                     <children>
+                        <Button fx:id="browse" mnemonicParsing="false" onAction="#browseFiles" prefHeight="39.0" prefWidth="92.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-radius: 5; -fx-border-width: 2;" text="Browse" textFill="WHITE">
+                           <effect>
+                              <Glow />
+                           </effect>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="20.0" left="50.0" right="20.0" top="20.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="uploadButton" mnemonicParsing="false" onAction="#uploadFile" prefHeight="39.0" prefWidth="92.0" style="-fx-background-color: #0078D7; -fx-background-radius: 5;" text="Upload" textFill="WHITE">
+                           <effect>
+                              <Glow />
+                           </effect>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="20.0" left="10.0" right="20.0" top="20.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
